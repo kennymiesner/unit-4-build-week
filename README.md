@@ -25,4 +25,4 @@ AnywhereFitness is the all-in-one solution to meet your “on-location” fitnes
 | Method                        | Endpoint                           | Body (required) | Body (optional) | Notes                                                            |
 | ----------------------------- | ---------------------------------- | --------------- | --------------- | ---------------------------------------------------------------- |
 | GET All Classes               | /api/classes                       | N/A             | N/A             | Fetches all the classes from the database                        |
-| GET All Users                 | /api/classes                       | N/A             | N/A             | Fetches all the users from the database                        |
+| GET All Users                 | /api/users                         | N/A             | N/A             | Fetches all the users from the database                          |
