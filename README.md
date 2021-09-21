@@ -16,8 +16,8 @@ this endpoint will return all classes listed by the user with the user_id
 
 this endpoint needs a body to post with, like below
 {
-"user_email": "xxxxxx@gmail.com",
-"role_name": "owner or customer",
+"email": "xxxxxx@gmail.com",
+"role": "owner or customer",
 "password":"xxxxx"
 }
 **Response will be**
@@ -35,13 +35,13 @@ or
 
 this endpoint needs a body to post with, for example:
 {
-"user_email": "ppp@gmail.com",
+"email": "ppp@gmail.com",
 "password":"1234"
 }
 **Response will be**
 {
 "message": "welcome, ppp@gmail.com",
-"role_name": "owner",
+"role": "owner",
 "user_id": 5,
 "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoicHBwQGdtYWlsLmNvbSIsInJvbGVfbmFtZSI6Im93bmVyIiwiaWF0IjoxNjMyMDI5OTY1LCJleHAiOjE2MzIxMTYzNjV9.Py_GbcRMInXsUpkGhlxWVwRxiH5iEbfabHjjX0YwyLQ"
 }

@@ -4,9 +4,9 @@ const { JWT_SECRET } = require('./config')
 
 module.exports = function (user) {
   const payload = {
-    subject: user.id,
-    user_email: user.user_email,
-    role_name: user.role_name,
+    subject: user.user_id,
+    email: user.email,
+    role: user.role,
   }
   const options = {
     expiresIn: '1d',
