@@ -6,9 +6,9 @@ this endpoint will return all users
 
 //
 
-#### 2 [GET] Get each user listed items, endpoint: https://buildweekapp.herokuapp.com/api/users/:user_id/listed-items
+#### 2 [GET] Get each user listed classes, endpoint: https://buildweekapp.herokuapp.com/api/users/:user_id/listed-classes
 
-this endpoint will return all items listed by the user with the user_id
+this endpoint will return all classes listed by the user with the user_id
 
 //
 
@@ -52,13 +52,13 @@ this endpoint needs a body to post with, for example:
 
 //
 
-#### 5 [GET] Get all items, endpoint: https://buildweekapp.herokuapp.com/api/items
+#### 5 [GET] Get all classes, endpoint: https://buildweekapp.herokuapp.com/api/classes
 
-this endpoint will respond with all items listed for sale
+this endpoint will respond with all classes listed for sale
 
 //
 
-#### 6 [GET] Get item by id, endpoint: https://buildweekapp.herokuapp.com/api/items/:id
+#### 6 [GET] Get item by id, endpoint: https://buildweekapp.herokuapp.com/api/classes/:id
 
 this endpoint will return the item with that id, if id doesn't exist, it will return
 {
@@ -67,7 +67,7 @@ this endpoint will return the item with that id, if id doesn't exist, it will re
 
 //
 
-#### 7 [POST] Adding new item, endpoint: https://buildweekapp.herokuapp.com/api/items
+#### 7 [POST] Adding new item, endpoint: https://buildweekapp.herokuapp.com/api/classes
 
 this endpoint needs a body, for example:
 {
@@ -82,7 +82,7 @@ this endpoint needs a body, for example:
 
 //
 
-#### 8 [PUT] Update an item by id, endpoint: https://buildweekapp.herokuapp.com/api/items/:id
+#### 8 [PUT] Update an item by id, endpoint: https://buildweekapp.herokuapp.com/api/classes/:id
 
 this endpoint needs a body like the example above, the response will be the updated item or
 {
@@ -91,7 +91,7 @@ this endpoint needs a body like the example above, the response will be the upda
 
 //
 
-#### 9 [DELETE] delete an item by id, endpoint: https://buildweekapp.herokuapp.com/api/items/:id
+#### 9 [DELETE] delete an item by id, endpoint: https://buildweekapp.herokuapp.com/api/classes/:id
 
 the response will be:
 {

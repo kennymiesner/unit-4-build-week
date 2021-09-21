@@ -3,7 +3,7 @@ const helmet = require('helmet')
 const cors = require('cors')
 
 const authRouter = require('./auth/auth-router')
-const itemsRouter = require('./items/items-router')
+const classesRouter = require('./classes/classes-router')
 const usersRouter = require('./users/users-router')
 
 const server = express()
@@ -13,7 +13,7 @@ server.use(express.json())
 
 server.use('/api/users', usersRouter)
 server.use('/api/auth', authRouter)
-server.use('/api/items', itemsRouter)
+server.use('/api/classes', classesRouter)
 
 server.get("/", (req, res) => {
   res.json({ api: "up and running" })

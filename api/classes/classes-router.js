@@ -1,20 +1,21 @@
 const router = require('express').Router()
-const Items = require('./items-model')
-const { checkItemId, checkUserId } = require('../middleware')
+const classes = require('./classes-model')
+const { checkClassId } = require('../middleware')
+
 router.get('/', (req, res, next) => {
-  Items.getAllItems()
-    .then((items) => {
-      res.status(200).json(items)
+  classes.getAllclasses()
+    .then((classes) => {
+      res.status(200).json(classes)
     })
     .catch((err) => next(err))
 })
 
-router.get('/:id', checkItemId, (req, res) => {
+router.get('/:id', checkClassId, (req, res) => {
   res.json(req.item)
 })
 
 router.post('/', (req, res, next) => {
-  Items.addItem(req.body)
+  classes.addItem(req.body)
     .then((item) => {
       res.status(201).json(item)
     })
@@ -23,8 +24,8 @@ router.post('/', (req, res, next) => {
     })
 })
 
-router.put('/:id', checkItemId, (req, res, next) => {
-  Items.update(req.params.id, req.body)
+router.put('/:id', checkClassId, (req, res, next) => {
+  classes.update(req.params.id, req.body)
     .then((item) => {
       res.status(200).json(item)
     })
@@ -33,8 +34,8 @@ router.put('/:id', checkItemId, (req, res, next) => {
     })
 })
 
-router.delete('/:id', checkItemId, (req, res, next) => {
-  Items.removeItem(req.params.id)
+router.delete('/:id', checkClassId, (req, res, next) => {
+  classes.removeItem(req.params.id)
     .then(() => {
       res.status(200).json({ message: 'The item has been removed' })
     })
