@@ -3,7 +3,7 @@ const classes = require('./classes-model')
 const { checkClassId } = require('../middleware')
 
 router.get('/', (req, res, next) => {
-  classes.getAllclasses()
+  classes.getAllClasses()
     .then((classes) => {
       res.status(200).json(classes)
     })
@@ -37,7 +37,7 @@ router.put('/:id', checkClassId, (req, res, next) => {
 router.delete('/:id', checkClassId, (req, res, next) => {
   classes.removeItem(req.params.id)
     .then(() => {
-      res.status(200).json({ message: 'The item has been removed' })
+      res.status(200).json({ message: 'The class has been removed' })
     })
     .catch((error) => {
       next(error)
