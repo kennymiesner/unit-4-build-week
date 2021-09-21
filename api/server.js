@@ -15,4 +15,15 @@ server.use('/api/users', usersRouter)
 server.use('/api/auth', authRouter)
 server.use('/api/items', itemsRouter)
 
+server.get("/", (req, res) => {
+  res.json({ api: "up and running" })
+})
+
+server.use((err, req, res, next) => { // eslint-disable-line
+  res.status(err.status || 500).json({
+    message: err.message,
+    stack: err.stack,
+  })
+})
+
 module.exports = server
